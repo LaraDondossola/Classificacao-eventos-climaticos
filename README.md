@@ -51,7 +51,7 @@ Classificacao-eventos-climaticos/
 │   ├── Danos_Informados_Original.xlsx   # Dados brutos extraídos do S2iD
 │   └── Danos_Informados.xlsx       # Base com ruídos controlados para testes de pipeline
 │
-├── notebooks/
+├── Notebooks/
 │   ├── Introdução_de_ruídos.ipynb       # Script para simulação de imperfeições no dataset
 │   └── eda_e_modelagem.ipynb            # Notebook principal de EDA, Limpeza e Machine Learning
 │
