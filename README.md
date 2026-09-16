@@ -39,7 +39,6 @@ O projeto avaliou algoritmos supervisionados em duas frentes de modelagem distin
 * **K-Nearest Neighbors (KNN Classifier):** Classificador baseado na proximidade do espaço de atributos das ocorrências.
 * **Regressão Logística (Logistic Regression):** Modelo linear baseline parametrizado para multiclasse via *One-vs-Rest* (OvR).
 * **Métricas de Avaliação:** *F1-Score (Macro)*, *Precision*, *Recall* e *Matriz de Confusão*. 
-  > **Métrica Chave:** O **F1-Score Macro** foi adotado como métrica principal devido ao desbalanceamento das classes, garantindo peso igual para a detecção da classe crítica (*Alto Risco*).
 
 ### 📈 2. Modelos de Regressão (Estimativa da População Afetada Total)
 * **K-Nearest Neighbors (KNN Regressor):** Estimativa contínua pela média ponderada dos vizinhos mais próximos.
