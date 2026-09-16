@@ -47,7 +47,7 @@ O projeto avaliou algoritmos supervisionados em duas frentes de modelagem distin
 * **Métricas de Avaliação:** *RMSE (Root Mean Squared Error)*, *MAE (Mean Absolute Error)* e *$R^2$ Score (Coeficiente de Determinação)*.
 
 ---
-cccc
+
 ## 🗃️ Base de Dados (Dataset)
 
 Os dados utilizados são provenientes do **S2iD (Sistema Integrado de Informações sobre Desastres)**, mantido pelo Ministério da Integração e do Desenvolvimento Regional. 
