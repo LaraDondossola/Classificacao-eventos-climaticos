@@ -79,14 +79,14 @@ Classificacao-eventos-climaticos/
 │   ├── Danos_Informados_Original.xlsx        # Dados brutos extraídos do S2iD
 │   └── Danos_Informados.xlsx                 # Base com ruídos controlados para testes de pipeline
 │
-├── notebooks/                 
+├── Notebooks/                 
 │   ├── Limpeza-e-Pré-processamento.ipynb     # Notebook principal EDA, Pré Processamento, Treinamento.
 │   ├── Introdução_de_ruídos.ipynb            # Script para simulação de imperfeições no dataset
 │   └── Interface-eventos-climáticos.ipynb    #Script para simulação da interface
 │
-├── Artefatos_Modelos/                        # Modelos exportados após treinamento (.pkl)
-│   ├── preprocessor.pkl                      # Pipeline de pré-processamento (padronização com StandardScaler e OneHotEncoder)
+├── Models/                        # Modelos exportados após treinamento (.pkl)
+│   ├── modelo_1_regressao_knn.pkl            # Modelo KNN treinado para regressão (estimativa da População Afetada Total)
 │   ├── modelo_b_classificacao_knn.pkl        # Modelo KNN treinado para classificação do Nível de Risco (Baixo, Médio ou Alto)
-│   └── modelo_1_regressao_knn.pkl            # Modelo KNN treinado para regressão (estimativa da População Afetada Total)
+│   └── preprocessor.pkl                      # Pipeline de pré-processamento (padronização com StandardScaler e OneHotEncoder)
 │
 └── README.md                                 # Documentação principal
