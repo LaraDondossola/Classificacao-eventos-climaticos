@@ -31,6 +31,23 @@ Desenvolver e comparar modelos de Machine Learning para prever a população afe
 
 ---
 
+## 🤖 Modelos de Machine Learning Utilizados
+
+O projeto avaliou algoritmos supervisionados em duas frentes de modelagem distintas:
+
+### 🎯 1. Modelos de Classificação (Predição do Nível de Risco: Baixo, Médio, Alto)
+* **K-Nearest Neighbors (KNN Classifier):** Classificador baseado na proximidade do espaço de atributos das ocorrências.
+* **Regressão Logística (Logistic Regression):** Modelo linear baseline parametrizado para multiclasse via *One-vs-Rest* (OvR).
+* **Métricas de Avaliação:** *F1-Score (Macro)*, *Precision*, *Recall* e *Matriz de Confusão*. 
+  > **Métrica Chave:** O **F1-Score Macro** foi adotado como métrica principal devido ao desbalanceamento das classes, garantindo peso igual para a detecção da classe crítica (*Alto Risco*).
+
+### 📈 2. Modelos de Regressão (Estimativa da População Afetada Total)
+* **K-Nearest Neighbors (KNN Regressor):** Estimativa contínua pela média ponderada dos vizinhos mais próximos.
+* **Regressão Linear Múltipla (Multiple Linear Regression):** Modelo de regressão parametricamente padronizado via `StandardScaler`.
+* **Métricas de Avaliação:** *RMSE (Root Mean Squared Error)*, *MAE (Mean Absolute Error)* e *$R^2$ Score (Coeficiente de Determinação)*.
+
+---
+cccc
 ## 🗃️ Base de Dados (Dataset)
 
 Os dados utilizados são provenientes do **S2iD (Sistema Integrado de Informações sobre Desastres)**, mantido pelo Ministério da Integração e do Desenvolvimento Regional. 
@@ -42,6 +59,17 @@ Os dados utilizados são provenientes do **S2iD (Sistema Integrado de Informaç�
 
 ---
 
+### ⚙️ Tratamentos Especiais Aplicados:
+
+1. **Outliers (Regressão):**
+   - **Conceito:** Observações de eventos extremamente catastróficos que distorcem as médias e o aprendizado das equações de regressão (ex: *KNN* e *Regressão Múltipla*).
+   - **Solução:** Aplicação do **Intervalo Interquartil (IQR)** na variável `População_Afetada_Total`. Foram filtrados e removidos os registros que ultrapassaram o limite superior tolerado ($Q3 + 3.0 \times IQR$).
+
+2. **Desbalanceamento de Classes (Classificação):**
+   - **Conceito:** Ocorre quando eventos de risco *Baixo* são massivamente superiores a eventos extremos de risco *Alto*, podendo induzir o modelo ao vício pela classe majoritária.
+   - **Solução:** Utilização de divisão estratificada (`stratify=y_class`) garantindo a mesma proporção de classes nos conjuntos de Treino, Validação e Teste, além da avaliação focada na métrica **F1-Score (Macro)**.
+
+---
 ## 🏗️ Estrutura do Repositório
 
 ```text
@@ -51,8 +79,9 @@ Classificacao-eventos-climaticos/
 │   ├── Danos_Informados_Original.xlsx   # Dados brutos extraídos do S2iD
 │   └── Danos_Informados.xlsx       # Base com ruídos controlados para testes de pipeline
 │
-├── Notebooks/
-│   ├── Introdução_de_ruídos.ipynb       # Script para simulação de imperfeições no dataset
-│   └── eda_e_modelagem.ipynb            # Notebook principal de EDA, Limpeza e Machine Learning
+├── notebooks/                 
+│   ├── Limpeza-e-Pré-processamento.ipynb #Notebook principal EDA, Pré Processamento, Treinamento.
+│   ├── Introdução_de_ruídos.ipynb # Script para simulação de imperfeições no dataset
+│   └── Interface-eventos-climáticos.ipynb #Script para simulação da interface
 │
 └── README.md                            # Documentação principal
