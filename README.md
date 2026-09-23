@@ -65,6 +65,7 @@ Classificacao-eventos-climaticos/
 └── README.md
 ```
 
+
 ##📊 Avaliação
 
 Os modelos são avaliados utilizando:
@@ -74,6 +75,7 @@ RMSE – Raiz do Erro Quadrático Médio;
 R² – Coeficiente de Determinação.
 
 Também são realizadas análises dos erros e dos resíduos das previsões.
+
 
 ##👩‍💻 Projeto
 
