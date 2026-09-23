@@ -66,7 +66,7 @@ Classificacao-eventos-climaticos/
 ```
 
 
-##📊 Avaliação
+## 📊 Avaliação
 
 Os modelos são avaliados utilizando:
 
@@ -77,7 +77,7 @@ R² – Coeficiente de Determinação.
 Também são realizadas análises dos erros e dos resíduos das previsões.
 
 
-##👩‍💻 Projeto
+## 👩‍💻 Projeto
 
 Classificação e Estimativa de Eventos Climáticos Extremos
 
