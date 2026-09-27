@@ -62,7 +62,7 @@ Classificacao-eventos-climaticos/
 │   ├── Limpeza_e_Pré_processamento.ipynb
 │   └── Interface_eventos_climáticos.ipynb
 │
-├──Projeto Final_ Aplicação de Machine Learning Clássico.pdf
+├── Projeto Final_ Aplicação de Machine Learning Clássico.pdf
 │
 └── README.md
 ```
